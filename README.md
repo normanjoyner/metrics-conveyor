@@ -20,9 +20,6 @@ Ship metrics from a datasource to various backends. Every minute, metrics-convey
 ## Configuration
 
 ### Environment Variables
-* `AWS_ACCESS_KEY_ID` - AWS access key id (required)
-* `AWS_SECRET_ACCESS_KEY` - AWS secret access key (required)
-* `AWS_REGION` - AWS region to pull metrics from (defaults to us-east-1)
 * `BACKEND_NAME` - backend to ship metrics to (defaults to stdout)
 * `GRAPHITE_HOST` - graphite server host (defaults to localhost)
 * `GRAPHITE_PORT` - graphite server port (defaults to 2003)
