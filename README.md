@@ -4,7 +4,7 @@ metrics-conveyor
 ## About
 
 ### Description
-Ship metrics from a datasource to various backends. Every minute, metrics-conveyor will pull metrics from your datasource of choice and ship them to the backend of your choice.
+Ship metrics from a datasource to various backends. Every minute, metrics-conveyor will pull metrics from your datasource of choice and ship them to the chosen backend.
 
 ### Author
 * Norman Joyner - norman.joyner@gmail.com
@@ -31,10 +31,12 @@ Ship metrics from a datasource to various backends. Every minute, metrics-convey
 * `INFLUXDB_USERNAME` - influxdb username (required for use with influxdb backend)
 * `INFLUXDB_PASSWORD` - influxdb password (required for use with influxdb backend)
 * `INFLUXDB_DATABASE` - influxdb database (defaults to metrics-conveyor)
+* `MIXPANEL_API_KEY` -  mixpanel api key (required for use with mixpanel datasource)
+* `MIXPANEL_API_SECRET` - mixpanel api secret (required for use with mixpanel datasource)
+* `MIXPANEL_EVENTS` - comma delimited list of mixpanel events to pull
 
 ### Available Datasources
 * Mixpanel
-    * Event
 
 ### Available Backends
 * Graphite
