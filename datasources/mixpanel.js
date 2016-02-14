@@ -27,8 +27,10 @@ Mixpanel.prototype.get_metrics = function(fn){
     }, function(response){
         var metrics = [];
         if(response && response.data && response.data.values){
-            var now = moment(new Date().setSeconds(0) - (61 * 1000));
+            var now = moment();
             now.tz("America/Los_Angeles");
+            now.seconds(0);
+            now.subtract(1, "hours");
             var timestamp = now.format("YYYY-MM-DD HH:mm:00");
             _.each(response.data.values, function(series, key){
                 var metric = {};
