@@ -31,6 +31,7 @@ Mixpanel.prototype.get_metrics = function(fn){
             now.tz("America/Los_Angeles");
             now.seconds(0);
             now.subtract(1, "hours");
+            now.subtract(1, "minutes");
             var timestamp = now.format("YYYY-MM-DD HH:mm:00");
             _.each(response.data.values, function(series, key){
                 var metric = {};
