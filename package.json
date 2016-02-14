@@ -1,6 +1,6 @@
 {
   "name": "metrics-conveyor",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Ship metrics from a datasource to various backends",
   "main": "application.js",
   "scripts": {
