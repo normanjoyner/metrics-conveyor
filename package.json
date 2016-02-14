@@ -31,6 +31,7 @@
     "influx": "^4.1.0",
     "lodash": "^2.4.1",
     "mixpanel-data-export": "^1.8.2",
+    "moment": "^2.11.2",
     "node-schedule": "^1.0.0"
   }
 }

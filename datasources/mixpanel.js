@@ -1,5 +1,6 @@
 var _ = require("lodash");
 var util = require("util");
+var moment = require("moment");
 var MixpanelExport = require('mixpanel-data-export');
 var Datasource = require([__dirname, "..", "lib", "datasource"].join("/"));
 
@@ -18,23 +19,18 @@ util.inherits(Mixpanel, Datasource);
 Mixpanel.prototype.get_metrics = function(fn){
     this.client.events({
         event: this.options.events,
-        type: "average",
+        type: "general",
         unit: "minute",
         interval: 1
     }, function(response){
         var metrics = [];
         if(response && response.data && response.data.values){
+            var now = moment(new Date().setSeconds(0) - (1000 * 60 * 60 * 3) - (60 * 1000));
+            var timestamp = now.format("YYYY-MM-DD HH:mm:00");
             _.each(response.data.values, function(series, key){
                 var metric = {};
                 metric.key = key.replace(/ /g, ".");
-                var earliest = null;
-                _.each(series, function(value, timestamp){
-                    timestamp = new Date(timestamp).valueOf();
-                    if(_.isNull(earliest) || timestamp < earliest){
-                        earliest = timestamp;
-                        metric.value = value;
-                    }
-                });
+                metric.value = series[timestamp];
                 metrics.push(metric);
             });
 
