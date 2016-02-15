@@ -97,6 +97,26 @@
       "from": "cryptiles@>=2.0.0 <3.0.0",
       "resolved": "http://registry.npmjs.org/cryptiles/-/cryptiles-2.0.5.tgz"
     },
+    "csv": {
+      "version": "0.4.6",
+      "from": "csv@latest",
+      "resolved": "https://registry.npmjs.org/csv/-/csv-0.4.6.tgz"
+    },
+    "csv-generate": {
+      "version": "0.0.6",
+      "from": "csv-generate@>=0.0.6 <0.0.7",
+      "resolved": "https://registry.npmjs.org/csv-generate/-/csv-generate-0.0.6.tgz"
+    },
+    "csv-parse": {
+      "version": "1.0.1",
+      "from": "csv-parse@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/csv-parse/-/csv-parse-1.0.1.tgz"
+    },
+    "csv-stringify": {
+      "version": "0.0.8",
+      "from": "csv-stringify@>=0.0.8 <0.0.9",
+      "resolved": "https://registry.npmjs.org/csv-stringify/-/csv-stringify-0.0.8.tgz"
+    },
     "dashdash": {
       "version": "1.13.0",
       "from": "dashdash@>=1.10.1 <2.0.0",
@@ -169,7 +189,14 @@
     "graphite": {
       "version": "0.0.6",
       "from": "graphite@0.0.6",
-      "resolved": "https://registry.npmjs.org/graphite/-/graphite-0.0.6.tgz"
+      "resolved": "https://registry.npmjs.org/graphite/-/graphite-0.0.6.tgz",
+      "dependencies": {
+        "request": {
+          "version": "2.1.1",
+          "from": "request@2.1.1",
+          "resolved": "https://registry.npmjs.org/request/-/request-2.1.1.tgz"
+        }
+      }
     },
     "har-validator": {
       "version": "2.0.6",
@@ -366,9 +393,9 @@
       "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.0.5.tgz"
     },
     "request": {
-      "version": "2.1.1",
-      "from": "request@2.1.1",
-      "resolved": "https://registry.npmjs.org/request/-/request-2.1.1.tgz"
+      "version": "2.69.0",
+      "from": "request@latest",
+      "resolved": "https://registry.npmjs.org/request/-/request-2.69.0.tgz"
     },
     "sntp": {
       "version": "1.0.9",
@@ -379,6 +406,11 @@
       "version": "1.7.4",
       "from": "sshpk@>=1.7.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/sshpk/-/sshpk-1.7.4.tgz"
+    },
+    "stream-transform": {
+      "version": "0.1.1",
+      "from": "stream-transform@>=0.1.0 <0.2.0",
+      "resolved": "https://registry.npmjs.org/stream-transform/-/stream-transform-0.1.1.tgz"
     },
     "string_decoder": {
       "version": "0.10.31",

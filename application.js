@@ -22,6 +22,12 @@ if(_.isUndefined(config.datasource.name)){
 config.datasource.name = config.datasource.name.toLowerCase();
 config.backend.name = config.backend.name.toLowerCase();
 
+if(config.datasource.name == "haproxy"){
+    config.datasource.base_url = process.env.HAPROXY_BASE_URL;
+    config.datasource.status_path = process.env.HAPROXY_STATUS_PATH || "/";
+    config.datasource.delimiter  = process.env.HAPROXY_METRIC_KEY_DELIMITER || ".";
+}
+
 if(config.datasource.name == "mixpanel"){
     config.datasource.api_key = process.env.MIXPANEL_API_KEY;
     config.datasource.api_secret = process.env.MIXPANEL_API_SECRET;

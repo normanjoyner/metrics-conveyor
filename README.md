@@ -31,8 +31,12 @@ Ship metrics from a datasource to various backends. Every minute, metrics-convey
 * `MIXPANEL_API_KEY` -  mixpanel api key (required for use with mixpanel datasource)
 * `MIXPANEL_API_SECRET` - mixpanel api secret (required for use with mixpanel datasource)
 * `MIXPANEL_EVENTS` - comma delimited list of mixpanel events to pull
+* `HAPROXY_BASE_URL` - base url & port of haproxy server (required for use with haproxy datasource)
+* `HAPROXY_STATUS_PATH` - haproxy status path (defaults to /)
+* `HAPROXY_METRIC_KEY_DELIMITER` - metric key delimiter (defaults to .)
 
 ### Available Datasources
+* HAProxy
 * Mixpanel
 
 ### Available Backends
