@@ -68,7 +68,7 @@ HAProxy.prototype.get_metrics = function(fn){
                         value: _.parseInt(line[28])
                     });
                     metrics.push({
-                        key: [name, "reponse", "2xx"].join(self.options.delimiter),
+                        key: [name, "response", "2xx"].join(self.options.delimiter),
                         value: _.parseInt(line[29])
                     });
                     metrics.push({
@@ -76,7 +76,7 @@ HAProxy.prototype.get_metrics = function(fn){
                         value: _.parseInt(line[30])
                     });
                     metrics.push({
-                        key: [name, "reponse", "4xx"].join(self.options.delimiter),
+                        key: [name, "response", "4xx"].join(self.options.delimiter),
                         value: _.parseInt(line[31])
                     });
                     metrics.push({
