@@ -33,47 +33,55 @@ HAProxy.prototype.get_metrics = function(fn){
 
                     metrics.push({
                         key: [name, "queue", "current"].join(self.options.delimiter),
-                        value: line[2]
+                        value: _.parseInt(line[2])
                     });
                     metrics.push({
                         key: [name, "queue", "max"].join(self.options.delimiter),
-                        value: line[3]
+                        value: _.parseInt(line[3])
                     });
                     metrics.push({
                         key: [name, "sessions", "current"].join(self.options.delimiter),
-                        value: line[4]
+                        value: _.parseInt(line[4])
                     });
                     metrics.push({
                         key: [name, "sessions", "max"].join(self.options.delimiter),
-                        value: line[5]
+                        value: _.parseInt(line[5])
                     });
                     metrics.push({
                         key: [name, "bytes", "in"].join(self.options.delimiter),
-                        value: line[8]
+                        value: _.parseInt(line[8])
                     });
                     metrics.push({
                         key: [name, "bytes", "out"].join(self.options.delimiter),
-                        value: line[9]
+                        value: _.parseInt(line[9])
                     });
                     metrics.push({
                         key: [name, "rate", "current"].join(self.options.delimiter),
-                        value: line[33]
+                        value: _.parseInt(line[33])
                     });
                     metrics.push({
                         key: [name, "rate", "max"].join(self.options.delimiter),
-                        value: line[35]
+                        value: _.parseInt(line[35])
                     });
                     metrics.push({
                         key: [name, "response", "1xx"].join(self.options.delimiter),
-                        value: line[28]
+                        value: _.parseInt(line[28])
                     });
                     metrics.push({
                         key: [name, "reponse", "2xx"].join(self.options.delimiter),
-                        value: line[29]
+                        value: _.parseInt(line[29])
                     });
                     metrics.push({
                         key: [name, "response", "3xx"].join(self.options.delimiter),
-                        value: line[30]
+                        value: _.parseInt(line[30])
+                    });
+                    metrics.push({
+                        key: [name, "reponse", "4xx"].join(self.options.delimiter),
+                        value: _.parseInt(line[31])
+                    });
+                    metrics.push({
+                        key: [name, "response", "5xx"].join(self.options.delimiter),
+                        value: _.parseInt(line[32])
                     });
                 });
 
