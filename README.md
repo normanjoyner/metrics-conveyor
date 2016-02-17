@@ -12,14 +12,14 @@ Ship metrics from a datasource to various backends. Every minute, metrics-convey
 ## Getting Started
 
 ### Installing via NPM
-`npm install -g metrics-conveyor`
+`npm install metrics-conveyor --save`
 
-### Running locally
-`metrics-conveyor`
+### Globally Installing via NPM
+`npm install metrics-conveyor -g`
 
 ## Configuration
 
-### Environment Variables
+### Environment Variables (global configuration)
 * `BACKEND_NAME` - backend to ship metrics to (defaults to stdout)
 * `GRAPHITE_HOST` - graphite server host (defaults to localhost)
 * `GRAPHITE_PORT` - graphite server port (defaults to 2003)
@@ -34,9 +34,11 @@ Ship metrics from a datasource to various backends. Every minute, metrics-convey
 * `HAPROXY_BASE_URL` - base url & port of haproxy server (required for use with haproxy datasource)
 * `HAPROXY_STATUS_PATH` - haproxy status path (defaults to /)
 * `HAPROXY_METRIC_KEY_DELIMITER` - metric key delimiter (defaults to .)
+* `MEMORY_GLOBAL_VARIABLE_NAME` - global key which holds metrics (required for use with memory datasource)
 
 ### Available Datasources
 * HAProxy
+* Memory
 * Mixpanel
 
 ### Available Backends
