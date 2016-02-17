@@ -10,7 +10,7 @@ function InfluxDB(options){
 util.inherits(InfluxDB, Backend);
 
 InfluxDB.prototype.write = function(metric, fn){
-    this.client.writePoint(metric.key, { value: metric.value, time: new Date() }, null, {}, fn);
+    this.client.writePoint(metric.key, { value: metric.value, time: new Date() }, metric.tags || {}, fn);
 }
 
 module.exports = InfluxDB;
